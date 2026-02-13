@@ -1,11 +1,9 @@
 [package]
-name = "john-ipcc-signals"
+name = "ipcc-stress"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 attest-data = { git = "https://github.com/oxidecomputer/dice-util", rev = "10952e8d9599b735b85d480af3560a11700e5b64" }
 libipcc = { git = "https://github.com/oxidecomputer/ipcc-rs", rev = "524eb8f125003dff50b9703900c6b323f00f9e1b" }
-signal-hook = "0.4"
-nix = { version = "0.31", features = ["signal"] }
-slog-error-chain = { git = "https://github.com/oxidecomputer/slog-error-chain", branch = "main" }
+nix = { version = "0.31", features = ["signal", "pthread"] }
